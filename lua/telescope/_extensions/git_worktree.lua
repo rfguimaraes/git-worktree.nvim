@@ -131,7 +131,7 @@ local create_worktree = function(opts)
 
             create_input_prompt(function(name)
                 if name == '' then
-                    name = branch
+                    name = '../' .. branch
                 end
                 git_worktree.create_worktree(name, branch)
             end)

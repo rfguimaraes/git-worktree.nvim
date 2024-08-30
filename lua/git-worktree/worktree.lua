@@ -104,6 +104,8 @@ function M.create(path, branch, upstream)
                 worktree_path = path
             else
                 worktree_path = Path:new(vim.loop.cwd(), path):absolute()
+                Log.warn('Trying ' .. worktree_path)
+                print('Trying ' .. worktree_path)
             end
 
             -- create_worktree(path, branch, upstream, found_branch)
